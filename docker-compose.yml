@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+
+  discovery-server:
+    build: ./discovery-server
+    ports:
+      - "8761:8761"
+
+  config-server:
+    build: ./config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - discovery-server
+
+  car-service:
+    build: ./car-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - discovery-server
+      - config-server
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - discovery-server
+      - config-server
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery-server
+      - car-service
+      - user-service
