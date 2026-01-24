@@ -1,0 +1,5 @@
+com\cartransport\user_service\controller\UserController.class
+com\cartransport\user_service\config\RestTemplateConfig.class
+com\cartransport\user_service\model\User.class
+com\cartransport\user_service\repository\UserRepository.class
+com\cartransport\user_service\UserServiceApplication.class
