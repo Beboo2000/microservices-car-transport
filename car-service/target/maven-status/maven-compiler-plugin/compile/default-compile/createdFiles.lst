@@ -1,0 +1,4 @@
+com\cartransport\car_service\controller\CarController.class
+com\cartransport\car_service\repository\CarRepository.class
+com\cartransport\car_service\CarServiceApplication.class
+com\cartransport\car_service\model\Car.class
